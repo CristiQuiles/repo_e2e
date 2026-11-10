@@ -1,8 +1,10 @@
-describe("Agregar tareas",()=> {
-    it("Agregar una tarea a la lista",()=>{
+describe("tarea completada",()=> {
+    it("tarea completada",()=>{
         cy.visit("http://todomvc-app-for-testing.surge.sh/")
-        cy.get(".new-todo").type("Tarea 1{enter}")
-        cy.get(".todo-list").contains("Tarea 1")
+        cy.get('.new-todo').type("Sacar al perro {enter}")
+        cy.get('.toggle').click()
+        cy.get(':nth-child(3) > a').click()
+
 
     })
 })
